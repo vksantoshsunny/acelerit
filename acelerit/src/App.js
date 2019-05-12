@@ -11,6 +11,7 @@ import pink from '@material-ui/core/colors/pink';
 import red from '@material-ui/core/colors/red';
 import Grid from "@material-ui/core/Grid";
 import Paper from '@material-ui/core/Paper';
+import logo from './logo.png'
 import './App.css';
 
 const styles = {
@@ -18,14 +19,18 @@ const styles = {
     maxWidth: 345
   },
   paper: {
-    marginleft : 20
+    padding: '5px'
+  },
+  divider: {
+    margin: '25px'
   }
+
 };
 
 const theme = createMuiTheme({
   palette: {
     primary:  {
-      main: '#00cbcc',
+      main: '#FFFFFF',
     },
     secondary: pink,
     error: red,
@@ -40,21 +45,22 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  const img = <img alt="" style={{marginTop: 10}} src={logo}/>
   return (
     <MuiThemeProvider theme={theme}>
-    <AppBar position="static" color="primary">
+    <AppBar  position="static" color="primary">
         <Toolbar>
           <Typography variant="h6" color="inherit">
-            Acelerit
+            {img}
           </Typography>
         </Toolbar>
       </AppBar>
       <Paper  elevation={1} style={styles.paper}>
       <div style={styles.paper}>
-      <Typography color="textSecondary" variant="h4">
+      <Typography color="textSecondary" variant="h5" style={styles.divider}>
       Products
     </Typography>
-    <Grid container spacing={24}>
+    <Grid container spacing={24} justify="center">
     <Grid item md={3}>
     <Card style={styles.card}>
     <CardActionArea>
@@ -102,16 +108,16 @@ function App() {
     </Grid>
     </Grid>
   
-      <Divider variant="middle" />
-      <Typography color="textSecondary" variant="h4">
+      <Divider variant="middle" style={styles.divider}/>
+      <Typography color="textSecondary" variant="h5" style={styles.divider}>
       Solutions
     </Typography>
-      <Divider variant="middle" />
-      <Typography color="textSecondary" variant="h4">
+      <Divider variant="middle" style={styles.divider}/>
+      <Typography color="textSecondary" variant="h5" style={styles.divider}>
       Services
     </Typography>
-      <Divider variant="middle" />
-      <Typography color="textSecondary" variant="h4">
+      <Divider variant="middle" style={styles.divider}/>
+      <Typography color="textSecondary" variant="h5" style={styles.divider}>
       Contact
     </Typography>
     </div>
