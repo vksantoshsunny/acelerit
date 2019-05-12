@@ -58,19 +58,19 @@ function App() {
       <Paper  elevation={1} style={styles.paper}>
       <div style={styles.paper}>
       <Typography color="textSecondary" variant="h5" style={styles.divider}>
-      Products
+      Values
     </Typography>
-    <Grid container spacing={24} justify="center">
+    <Grid container spacing={24} justify="flex-start">
     <Grid item md={3}>
-    <Card style={styles.card}>
+    <Card style={styles.card} >
     <CardActionArea>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          Product 1
+          Quality
         </Typography>
         <Typography component="p">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        We are committed to delivering only quality service to our clients with
+        passion and determination.
         </Typography>
       </CardContent>
     </CardActionArea>
@@ -81,11 +81,10 @@ function App() {
     <CardActionArea>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          Product 1
+          Professionalism
         </Typography>
         <Typography component="p">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        We are devoted to stay professional at all times. Focusing on getting the work done and only carry out constructive criticism and maintenance confidentiality
         </Typography>
       </CardContent>
     </CardActionArea>
@@ -96,11 +95,53 @@ function App() {
     <CardActionArea>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          Product 1
+          Integrity
         </Typography>
         <Typography component="p">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        We are committed to transparently, honestly, fairness and consideration in all our dealings
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  </Card>
+    </Grid>
+    <Grid item md={3}>
+    <Card style={styles.card}>
+    <CardActionArea>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          Diversity
+        </Typography>
+        <Typography component="p">
+        We thrive to give equal opportunities to all with no form of discrimination,
+        but only on merit, and making sure we respect different opinions and express ours openly and honestly.
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  </Card>
+    </Grid>
+    <Grid item md={3}>
+    <Card style={styles.card}>
+    <CardActionArea>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          Ethics
+        </Typography>
+        <Typography component="p">
+        We will always work with our employees, clients and other stakeholders with good faith dignity and honestly
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  </Card>
+    </Grid>
+    <Grid item md={3}>
+    <Card style={styles.card}>
+    <CardActionArea>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          Innovation
+        </Typography>
+        <Typography component="p">
+        We are committed to encouraging new ideas, research, IT product development, and continuous improvement of our client’s business processes, and stay open for experiments
         </Typography>
       </CardContent>
     </CardActionArea>
@@ -108,17 +149,10 @@ function App() {
     </Grid>
     </Grid>
   
+
       <Divider variant="middle" style={styles.divider}/>
       <Typography color="textSecondary" variant="h5" style={styles.divider}>
-      Solutions
-    </Typography>
-      <Divider variant="middle" style={styles.divider}/>
-      <Typography color="textSecondary" variant="h5" style={styles.divider}>
-      Services
-    </Typography>
-      <Divider variant="middle" style={styles.divider}/>
-      <Typography color="textSecondary" variant="h5" style={styles.divider}>
-      Contact
+      Team
     </Typography>
     </div>
     </Paper>
