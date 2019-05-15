@@ -118,7 +118,7 @@ const tiers = [
 const team = [
     {
       title: 'Technology',
-      description: ['Diverse portfolio', 'Enterprise architecture expetise', ''],
+      description: ['Diverse portfolio', 'Enterprise architecture expertise', ''],
       buttonText: 'Sign up for free',
       buttonVariant: 'outlined',
     },
