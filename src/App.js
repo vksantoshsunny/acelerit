@@ -1,4 +1,6 @@
 import React from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -13,8 +15,9 @@ import Grid from "@material-ui/core/Grid";
 import Paper from '@material-ui/core/Paper';
 import logo from './logo.png'
 import './App.css';
+import { withStyles } from '@material-ui/core/styles';
 
-const styles = {
+const styles = theme => ({
   card: {
     maxWidth: 345
   },
@@ -23,9 +26,21 @@ const styles = {
   },
   divider: {
     margin: '25px'
+  },
+  footer: {
+    marginTop: theme.spacing.unit * 8,
+    borderTop: `1px solid ${theme.palette.divider}`,
+    padding: `${theme.spacing.unit * 6}px 0`,
   }
 
-};
+});
+
+const footers = [
+  {
+    title: 'Contact us',
+    description: ['ACELERIT SOFTWARE SOLUTIONS (PTY) LTD', 'Registration Number: 2014/104105/07', '21 San Martino, Pretorius Street', 'Vorna Valley', 'Midrand 1686', 'Mobile Number: 071 872 4639/011 056 6526'],
+  }
+];
 
 const theme = createMuiTheme({
   palette: {
@@ -47,7 +62,8 @@ const theme = createMuiTheme({
   }
 });
 
-function App() {
+function App(props) {
+  const { classes } = props;
   const img = <img alt="" style={{marginTop: 10}} src={logo}/>
   return (
     <MuiThemeProvider theme={theme}>
@@ -159,8 +175,26 @@ function App() {
     </Typography>
     </div>
     </Paper>
+    {/* Footer */}
+    <footer className={classNames(classes.footer, classes.layout)}>
+        <Grid container spacing={32} justify="space-evenly">
+          {footers.map(footer => (
+            <Grid item xs key={footer.title}>
+              <Typography variant="h6" color="textPrimary" gutterBottom>
+                {footer.title}
+              </Typography>
+              {footer.description.map(item => (
+                <Typography key={item} variant="subtitle1" color="textSecondary">
+                  {item}
+                </Typography>
+              ))}
+            </Grid>
+          ))}
+        </Grid>
+      </footer>
+      {/* End footer */}
       </MuiThemeProvider>
   );
 }
 
-export default App;
+export default withStyles(styles)(App);
